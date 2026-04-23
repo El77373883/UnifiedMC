@@ -1,0 +1,7 @@
+name: UnifiedMC
+version: 1.0.0
+main: com.unifiedmc.UnifiedMC
+api-version: '1.21'
+description: Puente nativo Java-Bedrock - 100% independiente
+author: TuNombre
+website: https://github.com/TuUsuario/UnifiedMC
