@@ -1,0 +1,99 @@
+# UnifiedMC - Configuración principal
+# Versión 1.0.0
+
+# ============================================
+# CONFIGURACIÓN DE RED
+# ============================================
+
+network:
+  # Puerto UDP para conexiones Bedrock
+  port: 19132
+  
+  # Dirección IP para bindear (0.0.0.0 = todas las interfaces)
+  bind-address: "0.0.0.0"
+  
+  # Timeout de conexión en milisegundos
+  timeout: 30000
+
+# ============================================
+# CONFIGURACIÓN DEL SERVIDOR BEDROCK
+# ============================================
+
+bedrock:
+  # Versión del protocolo (v26.13 = 1.21.70 = 786)
+  protocol: 786
+  version: "1.21.70"
+  
+  # MOTD que verán los jugadores de Bedrock
+  motd: "&aUnifiedMC &7| &fJava + Bedrock"
+  
+  # Máximo de jugadores Bedrock (0 = mismo que Java)
+  max-players: 0
+  
+  # Modo de juego por defecto para Bedrock
+  # survival, creative, adventure, spectator
+  default-gamemode: "survival"
+
+# ============================================
+# CONFIGURACIÓN DE AUTENTICACIÓN
+# ============================================
+
+auth:
+  # Permitir jugadores sin autenticación (modo offline)
+  # true = cualquiera puede entrar con cualquier nombre
+  # false = requiere cuenta de Microsoft/Xbox Live
+  offline-mode: true
+  
+  # Prefijo para nombres de jugadores Bedrock
+  # Ejemplo: "BR_" + nombre = "BR_Steve"
+  name-prefix: "BR_"
+
+# ============================================
+# CONFIGURACIÓN DE TRADUCCIÓN
+# ============================================
+
+translation:
+  # Radio de chunks a enviar a jugadores Bedrock
+  chunk-radius: 8
+  
+  # Frecuencia de actualización de chunks (en ticks, 20 = 1 segundo)
+  chunk-update-interval: 5
+  
+  # Traducir comandos de Bedrock a Java
+  # /tp -> /teleport, etc.
+  translate-commands: true
+
+# ============================================
+# CONFIGURACIÓN DE DESARROLLO
+# ============================================
+
+debug:
+  # Mostrar paquetes recibidos en consola
+  show-packets: false
+  
+  # Mostrar información de conexiones
+  show-connections: true
+  
+  # Guardar paquetes en archivo para análisis
+  dump-packets: false
+  
+  # Directorio para dumps de paquetes
+  dump-directory: "packet-dumps"
+  
+  # Nivel de log (INFO, WARNING, SEVERE)
+  log-level: "INFO"
+
+# ============================================
+# MENSAJES PERSONALIZADOS
+# ============================================
+
+messages:
+  join: "&7[&a+&7] &e%player% &7se unió desde Bedrock"
+  leave: "&7[&c-&7] &e%player% &7salió"
+  kick: "&cHas sido expulsado: %reason%"
+  full: "&cEl servidor está lleno"
+  
+# ============================================
+# NO TOCAR - VERSIÓN DE CONFIGURACIÓN
+# ============================================
+config-version: 1
